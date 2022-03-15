@@ -1,20 +1,21 @@
 #include "main.h"
+
 /**
- * main - Entry block
- * Description: prints holberton on new line
- * Return: 0
+ * main - main function 
+ * Description: prints _putchar using a custom header
+ * The main.h file has a prototype function called _putchar
+ * that is linked to a file called _putchar.c
+ * Return: 0 
  */
-int main(void)
+int main()
 {
-	char c[9] = "_putchar";
+char mess[] = "_putchar";
+int position;
 
-	int i = 0;
-
-	while (i < 9)
-	{
-		_putchar(c[i]);
-		i++;
-	}
-	_putchar('\n');
-	return (0);
+for(position = 0; position < sizeof(mess); position++)
+{
+_putchar(mess[position]);
+}
+_putchar("\n");
+return (0);
 }
